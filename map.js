@@ -177,4 +177,3 @@ function create_map(nodesParam, edgesParam, rootIdParam, formatted) {
   })
   Graph.zoom(2.5, 750)
 }
-export {create_map}
