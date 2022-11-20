@@ -1,3 +1,4 @@
+<script>
 function create_map(nodesParam, edgesParam, rootIdParam, formatted) {
   const rootId = rootIdParam
   let nodes = []
@@ -158,4 +159,5 @@ function create_map(nodesParam, edgesParam, rootIdParam, formatted) {
   })
   Graph.zoom(2.5, 750)
 }
-export {create_map}
+</script>
+// export {create_map}
