@@ -176,4 +176,5 @@ function create_map(nodesParam, edgesParam, rootIdParam, formatted) {
     }
   })
   Graph.zoom(2.5, 1000)
+  console.log("new release here")
 }
