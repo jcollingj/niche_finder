@@ -175,6 +175,6 @@ function create_map(nodesParam, edgesParam, rootIdParam, formatted) {
       }, 500)
     }
   })
-  Graph.zoom(2.5, 1000)
+  Graph.zoomToFit(0, 10, node => true)
   console.log("new release here")
 }
