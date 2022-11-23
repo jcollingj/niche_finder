@@ -175,5 +175,5 @@ function create_map(nodesParam, edgesParam, rootIdParam, formatted) {
       }, 500)
     }
   })
-  Graph.zoom(2.5, 750)
+  Graph.zoom(2.5, 1000)
 }
