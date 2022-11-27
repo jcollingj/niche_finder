@@ -137,12 +137,14 @@ function create_map(nodesParam, edgesParam, rootIdParam, formatted) {
     .graphData(getPrunedTree())
     .nodeCanvasObject((node, ctx) => drawFunction(node, 'color', ctx))
     .onNodeHover(node => elem.style.cursor = node && node.childLinks.length ? 'pointer' : null)
+    .height(window.innerHeight - 60)
   // Call back function that prints the event
   // .linkDirectionalParticles(1)
   // .linkDirectionalParticleWidth(2.5)
   // .nodeColor(node => !node.childLinks.length ? 'green' : node.collapsed ? 'red' : 'yellow');
   // This works but is horribly not smooth
   // Graph.d3Force('collide', d3.forceCollide(30))
+  
   Graph.d3Force('charge', d3.forceManyBody().strength(-300))
   // Create a new link force that shortens the link distance
   // const linkForce = d3.forceLink().distance(100)
@@ -177,12 +179,16 @@ function create_map(nodesParam, edgesParam, rootIdParam, formatted) {
   })
 
   // Get the center of the div with id "graph"
-  const graphDiv = document.getElementById('graph')
-  const graphDivWidth = graphDiv.offsetWidth
-  const graphDivHeight = graphDiv.offsetHeight
-  const graphDivCenterX = graphDivWidth / 2
-  const graphDivCenterY = graphDivHeight / 2
+  // const graphDiv = document.getElementById('graph')
+  // const graphDivWidth = graphDiv.offsetWidth
+  // const graphDivHeight = graphDiv.offsetHeight
+  // const graphDivCenterX = graphDivWidth / 2
+  // const graphDivCenterY = graphDivHeight / 2
   // Get the center of the graph
-  Graph.centerAt(graphDivCenterX, graphDivCenterY, 0)
+  // Graph.centerAt(graphDivCenterX, graphDivCenterY, 0)
+  elementResizeDetectorMaker().listenTo(
+    document.getElementById('graph'),
+    el => Graph.width(el.offsetWidth)
+  );
   setTimeout(() => Graph.zoomToFit(400, 50), 500);
 }
