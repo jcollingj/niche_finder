@@ -175,6 +175,14 @@ function create_map(nodesParam, edgesParam, rootIdParam, formatted) {
       }, 500)
     }
   })
+
+  // Get the center of the div with id "graph"
+  const graphDiv = document.getElementById('graph')
+  const graphDivWidth = graphDiv.offsetWidth
+  const graphDivHeight = graphDiv.offsetHeight
+  const graphDivCenterX = graphDivWidth / 2
+  const graphDivCenterY = graphDivHeight / 2
+  // Get the center of the graph
+  Graph.centerAt(graphDivCenterX, graphDivCenterY, 0)
   setTimeout(() => Graph.zoomToFit(400, 50), 500);
-  console.log("new release here")
 }
