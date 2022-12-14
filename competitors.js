@@ -122,12 +122,12 @@ function create_map(nodesParam, edgesParam, rootIdParam, formatted) {
     }
   }
   // Get the center of the div with id "graph"
-  const graphDiv = document.getElementById('graph')
+  const graphDiv = document.getElementById('competitorsGraph')
   const graphDivWidth = graphDiv.offsetWidth
   const graphDivHeight = graphDiv.offsetHeight
   const graphDivCenterX = graphDivWidth / 2
   const graphDivCenterY = graphDivHeight / 2
-  const elem = document.getElementById('graph');
+  const elem = document.getElementById('competitorsGraph');
   const Graph = ForceGraph()(elem)
     .graphData(getPrunedTree())
     .nodeCanvasObject((node, ctx) => drawFunction(node, 'color', ctx))
@@ -141,7 +141,7 @@ function create_map(nodesParam, edgesParam, rootIdParam, formatted) {
     window.open(`https://www.${domain}`, '_blank');
   })
   elementResizeDetectorMaker().listenTo(
-    document.getElementById('graph'),
+    document.getElementById('competitorsGraph'),
     el => Graph.width(el.offsetWidth)
   );
 
