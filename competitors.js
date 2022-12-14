@@ -148,7 +148,7 @@ function create_map(nodesParam, edgesParam, rootIdParam, formatted) {
 
   // Get the center of the graph
   // Graph.centerAt(graphDivCenterX, graphDivCenterY, 0)
-  setTimeout(() => Graph.zoomToFit(400, 50), 500);
+  setTimeout(() => Graph.zoomToFit(400, 150), 500);
 }
 function formatNodesEdges(root, competitors) {
   const nodes = competitors.split(",").map((competitor) => {
