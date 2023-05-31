@@ -1,4 +1,4 @@
- function splitStringToLists(str) {
+  function splitStringToLists(str) {
     const dates = [];
     const values = [];
     const month_averages = {}
@@ -30,8 +30,8 @@
     }
     return {dates, values};
   }
-  const data_string = '2022-05-26++1235|2022-06-09++1227|2022-06-23++1330|2022-07-09++1269|2022-07-23++1507|2022-08-06++1598|2022-08-20++1939|2022-09-03++1727|2022-09-17++2048|2022-10-01++2763|2022-10-15++2948|2022-10-30++4433|2022-11-13++4301|2022-11-28++4887|2022-12-13++4739|2022-12-28++4347|2023-01-12++4660|2023-01-27++5130|2023-02-11++7604|2023-02-26++7701|2023-03-13++7495|2023-03-28++7168|2023-04-12++6965|2023-04-27++5187|2023-05-12++5551'
-  const {dates, values} = splitStringToLists(data_string)
+  function create_traffic_graph(data_string) {
+    const {dates, values} = splitStringToLists(data_string)
   const ctx = document.getElementById('myChart').getContext('2d');
   Chart.defaults.font.family = "'Poppins', 'sans-serif'";
   // Chart.defaults.scales.color = 'red';
@@ -101,4 +101,5 @@
         },
       }
     }
-  });
+  }); 
+  }
