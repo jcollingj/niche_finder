@@ -41,7 +41,7 @@
     data: {
       labels: dates,
       datasets: [{
-        label: 'Estimated Organic Traffic',
+        label: '',
         data: values,
         backgroundColor: 'rgba(0, 123, 255, 0.3)',
         borderColor: '#24DDED',
