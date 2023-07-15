@@ -190,5 +190,5 @@ function create_map(nodesParam, edgesParam, rootIdParam, formatted) {
     document.getElementById('graph'),
     el => Graph.width(el.offsetWidth)
   );
-  setTimeout(() => Graph.zoomToFit(400, 50), 500);
+  setTimeout(() => Graph.zoomToFit(400, 125), 500);
 }
